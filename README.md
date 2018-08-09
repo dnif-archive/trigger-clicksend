@@ -3,11 +3,11 @@ https://clicksend.docs.apiary.io/
 
 The trigger directive allows for a call to be placed with a custom message.
 
-## Trigger functions incorporated with ClickSend
+## ClickSend trigger plugin functions
+Details of the function that can be used with the ClickSend trigger is given in this section.
 
-### Call
- 
-This function places a call to a specified number with a custom message against an observerd event .
+### Call 
+This function allows for a call to be placed to a specified number with a custom message against an observerd event .
 
 ### Input  
 - Contact person's mobile number 
@@ -39,19 +39,19 @@ The output of the lookup call has the following structure (for the available dat
 ### Using the ClickSend API and DNIF  
 The ClickSend API is found on github at 
 https://github.com/dnif/trigger-clicksend
-#### Getting started with ClickSend API and DNIF
+### Getting started with ClickSend API and DNIF
 
-1. #####    Login to your Data Store, Correlator, and A10 containers.  
+1. ####    Login to your Data Store, Correlator, and A10 containers.  
    [ACCESS DNIF CONTAINER VIA SSH](https://dnif.it/docs/guides/tutorials/access-dnif-container-via-ssh.html)
-2. #####    Move to the `‘/dnif/<Deployment-key>/trigger_plugins’` folder path.
+2. ####    Move to the `‘/dnif/<Deployment-key>/trigger_plugins’` folder path.
 ```
 $cd /dnif/CnxxxxxxxxxxxxV8/lookup_plugins/
 ```
-3. #####   Clone using the following command  
+3. ####   Clone using the following command  
 ```  
 git clone https://github.com/dnif/trigger-clicksend.git clicksend
 ```
-4. #####   Move to the `‘/dnif/<Deployment-key>/trigger_plugins/clicksend/’` folder path and open dnifconfig.yml configuration file     
+4. ####   Move to the `‘/dnif/<Deployment-key>/trigger_plugins/clicksend/’` folder path and open dnifconfig.yml configuration file     
     
    Replace the tag: <Add_your_api_key_here> with your ClickSend api key
 ```
@@ -61,7 +61,7 @@ trigger_plugin:
   CS_SOURCE: <Add_the_name_of_source_here>
   CS_LANG: <Add_language_here>
   CS_VOICE: <Add_voice_gender_here>
-  CS_REQUIRE_INPUT: <Add_1_for t
+  CS_REQUIRE_INPUT: <Add_1_for_true,Add_0_for_false>
   CS_MACHINE_DETECTION: 0 
 
 ```
