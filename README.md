@@ -10,12 +10,18 @@ The trigger directive allows for a call to be placed with a custom message.
 Allows for placing a call to a specified number with0 a message, error, warning etc.
 
 - input : the custom message to be sent
-
+   
+### Example
 ```
 _fetch * from event where $Intel=True limit 1
 >> _trigger api clicksend call +9183xxxxxxxx, Source found positive in Intel check , $SrcIP
 ```
-
+  
+### Output  
+  ![clicksend1](https://user-images.githubusercontent.com/37173181/43878059-c16d3d4e-9bba-11e8-85b0-e153f01881aa.jpg)
+    
+The output of the lookup call has the following structure (for the available data)
+    
 |     Field     |             Description              |
 |---------------|--------------------------------------|
 | $CSCarrier    | The carrier ClickSend is calling to  |
