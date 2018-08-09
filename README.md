@@ -18,7 +18,8 @@ _fetch * from event where $Intel=True limit 1
 ```
   
 ### Output  
-  ![clicksend1](https://user-images.githubusercontent.com/37173181/43878059-c16d3d4e-9bba-11e8-85b0-e153f01881aa.jpg)
+  ![clicksendedt](https://user-images.githubusercontent.com/37173181/43879411-934b639e-9bc1-11e8-8104-ffcd70cf2c15.jpg)
+
     
 The output of the lookup call has the following structure (for the available data)
     
@@ -55,7 +56,6 @@ git clone https://github.com/dnif/trigger-clicksend.git clicksend
 trigger_plugin:
   CS_USERNAME: <Add_your_ClickSend_username_here>
   CS_API_KEY:  <Add_your_api_key_here>
-  CS_NUMBER: <Add_your_number_here>
   CS_SOURCE: <Add_the_name_of_source_here>
   CS_LANG: <Add_language_here>
   CS_VOICE: <Add_voice_gender_here>
