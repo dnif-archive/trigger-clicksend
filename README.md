@@ -1,7 +1,9 @@
 # ClickSend
-https://clicksend.docs.apiary.io/
+https://www.clicksend.com/in/voice/
 
-The trigger directive allows for a call to be placed with a custom message.
+## Overview
+ClickSend is a global leader in business communication solutions.
+From bulk marketing to mission-critical solutions, email marketing tools through to Fax, Post and Geolocation services, are used by some of the largest and most trusted brands in India and around the world.  
 
 ## ClickSend trigger plugin functions
 Details of the function that can be used with the ClickSend trigger is given in this section.
