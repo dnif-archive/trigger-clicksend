@@ -7,10 +7,12 @@ The trigger directive allows for a call to be placed with a custom message.
 
 ### Call
  
-Allows for placing a call to a specified number with0 a message, error, warning etc.
+This function places a call to a specified number with a custom message against an observerd event .
 
-- input : the custom message to be sent
-   
+### Input  
+- Contact person's mobile number 
+- The custom message to be sent for the event
+- The event(example $SrcIP)   
 ### Example
 ```
 _fetch * from event where $Intel=True limit 1
@@ -36,7 +38,7 @@ The output of the lookup call has the following structure (for the available dat
 
 ### Using the ClickSend API and DNIF  
 The ClickSend API is found on github at 
-
+https://github.com/dnif/trigger-clicksend
 #### Getting started with ClickSend API and DNIF
 
 1. #####    Login to your Data Store, Correlator, and A10 containers.  
