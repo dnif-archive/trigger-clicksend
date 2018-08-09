@@ -1,0 +1,8 @@
+trigger_plugin:
+  CS_USERNAME: <Add_your_ClickSend_username_here>
+  CS_API_KEY: <Add_your_API_key_here>
+  CS_SOURCE: <Add_the_name_of_source_here (example'DNIF')>
+  CS_LANG: <Add_language_here (example'en-us')>
+  CS_VOICE: <Add_voice_gender_here (example'female')>
+  CS_REQUIRE_INPUT: <Add_1_for_true,Add_0_for_false>
+  CS_MACHINE_DETECTION: 0 
