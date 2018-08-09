@@ -47,7 +47,7 @@ https://github.com/dnif/trigger-clicksend
    [ACCESS DNIF CONTAINER VIA SSH](https://dnif.it/docs/guides/tutorials/access-dnif-container-via-ssh.html)
 2. ####    Move to the `‘/dnif/<Deployment-key>/trigger_plugins’` folder path.
 ```
-$cd /dnif/CnxxxxxxxxxxxxV8/lookup_plugins/
+$cd /dnif/CnxxxxxxxxxxxxV8/trigger_plugins/
 ```
 3. ####   Clone using the following command  
 ```  
@@ -55,7 +55,7 @@ git clone https://github.com/dnif/trigger-clicksend.git clicksend
 ```
 4. ####   Move to the `‘/dnif/<Deployment-key>/trigger_plugins/clicksend/’` folder path and open dnifconfig.yml configuration file     
     
-   Replace the tag: <Add_your_api_key_here> with your ClickSend api key
+   Replace the tag: <Add_your_api_key_here> with your ClickSend API key
 ```
 trigger_plugin:
   CS_USERNAME: <Add_your_ClickSend_username_here>
