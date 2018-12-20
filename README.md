@@ -5,7 +5,7 @@ https://www.clicksend.com/in/voice/
 ClickSend is a global leader in business communication solutions.
 From bulk marketing to mission-critical solutions, email marketing tools through to Fax, Post and Geolocation services, are used by some of the largest and most trusted brands in India and around the world.  
 
-#### PRE-REQUISITES to use clicksend and DNIF  
+#### PRE-REQUISITES to use ClickSend and DNIF  
 Outbound access required for github to clone the plugin
 
 | Protocol   | Source IP  | Source Port  | Direction	 | Destination Domain | Destination Port  |  
