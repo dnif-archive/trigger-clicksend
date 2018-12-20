@@ -1,29 +1,37 @@
 # ClickSend
 https://www.clicksend.com/in/voice/
 
-## Overview
+### Overview
 ClickSend is a global leader in business communication solutions.
 From bulk marketing to mission-critical solutions, email marketing tools through to Fax, Post and Geolocation services, are used by some of the largest and most trusted brands in India and around the world.  
 
-## ClickSend trigger plugin functions
-Details of the function that can be used with the ClickSend trigger is given in this section.
+#### PRE-REQUISITES to use freshdesk and DNIF  
+Outbound access required for github to clone the plugin
 
-### Call 
+| Protocol   | Source IP  | Source Port  | Direction	 | Destination Domain | Destination Port  |  
+|:------------- |:-------------|:-------------|:-------------|:-------------|:-------------|  
+| TCP | DS,CR,A10 | Any | Egress	| github.com | 443 | 
+| TCP | DS,CR,A10 | Any | Egress	| clicksend.com | 443 |
+
+### ClickSend trigger plugin functions
+Details of the function that can be used with the ClickSend trigger is given in this section.  
+[call](#call)  
+[sms](#sms)
+
+### call 
 This function allows for a call to be placed to a specified number with a custom message against an observerd event .
 
-### Input  
+#### Input  
 - Contact person's mobile number 
-- The custom message to be sent for the event
-- The event(example $SrcIP)   
-### Example
+- The custom message to be sent for the event  
+#### Example
 ```
-_fetch * from event where $Intel=True limit 1
->> _trigger api clicksend call +9183xxxxxxxx, Source found positive in Intel check , $SrcIP
+_fetch $SrcIP, $ViolationField , $IntelRef from event where $Intel=True limit 1
+>> _trigger api clicksend call +918xxxxxxxxx "Source IP _SrcIP_ found positive in Intel check against Intel feed _IntelRef_"
 ```
   
-### Output  
-  ![clicksendedt](https://user-images.githubusercontent.com/37173181/43879411-934b639e-9bc1-11e8-8104-ffcd70cf2c15.jpg)
-
+#### Output  
+  ![call](https://user-images.githubusercontent.com/37173181/50265069-d981e780-0443-11e9-9116-0e4e36c79e1e.jpg)
     
 The output of the lookup call has the following structure (for the available data)
     
@@ -37,6 +45,34 @@ The output of the lookup call has the following structure (for the available dat
 | $CSStatus     | Status of the call placed            |
 | $CSTotalPrice | Cost of the call placed              |
 | $CSBalance    | Remaining balance in the account     |    
+
+### sms 
+This function allows for a sms to be sent to a specified number with a custom message against an observerd event .
+
+#### Input  
+- Contact person's mobile number 
+- The custom message to be sent for the event  
+#### Example
+```
+_fetch $SrcIP, $ViolationField , $IntelRef from event where $Intel=True limit 1
+>> _trigger api clicksend sms +918xxxxxxxxx "Source IP _SrcIP_ found positive in Intel check against Intel feed _IntelRef_"
+```  
+#### Output  
+  ![sms](https://user-images.githubusercontent.com/37173181/50265121-2960ae80-0444-11e9-8069-6bfc5f8dca27.jpg)
+    
+The output of the lookup call has the following structure (for the available data)
+    
+|     Field     |             Description              |
+|---------------|--------------------------------------|
+| $CSCarrier    | The carrier ClickSend is calling to  |
+| $CSCountry    | The country ClickSend is calling to  |
+| $CSMEssageID  | The ID of the call placed            |
+| $CSTime       | Time the call was placed             |
+| $CSFrom       | Number the call is being placed from |
+| $CSStatus     | Status of the call placed            |
+| $CSTotalPrice | Cost of the call placed              |
+| $CSBalance    | Remaining balance in the account     |    
+
 
 ### Using the ClickSend API and DNIF  
 The ClickSend API is found on github at 
@@ -65,5 +101,4 @@ trigger_plugin:
   CS_VOICE: <Add_voice_gender_here>
   CS_REQUIRE_INPUT: <Add_1_for_true,Add_0_for_false>
   CS_MACHINE_DETECTION: 0 
-
 ```
