@@ -5,13 +5,15 @@ https://www.clicksend.com/in/voice/
 ClickSend is a global leader in business communication solutions.
 From bulk marketing to mission-critical solutions, email marketing tools through to Fax, Post and Geolocation services, are used by some of the largest and most trusted brands in India and around the world.  
 
-#### PRE-REQUISITES to use freshdesk and DNIF  
+#### PRE-REQUISITES to use ClickSend and DNIF  
 Outbound access required for github to clone the plugin
 
 | Protocol   | Source IP  | Source Port  | Direction	 | Destination Domain | Destination Port  |  
 |:------------- |:-------------|:-------------|:-------------|:-------------|:-------------|  
 | TCP | DS,CR,A10 | Any | Egress	| github.com | 443 | 
-| TCP | DS,CR,A10 | Any | Egress	| clicksend.com | 443 |
+| TCP | DS,CR,A10 | Any | Egress	| clicksend.com | 443 |  
+
+**Note** The above rule assumes both request and response in enabled  
 
 ### ClickSend trigger plugin functions
 Details of the function that can be used with the ClickSend trigger is given in this section.  
